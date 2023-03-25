@@ -115,31 +115,45 @@
 		
 		.sobre{
 		position: relative;
-		top: 10;
+		top: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		overflow: hidden;
 		height: 90vh;
-		width: 50vw;
+		width: 70vw;
 		}
 		
-		.sobre img{
-		height: 230px;
-		width: 230px;
+		.sobre-catalogo{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: red;
+		height: 333px;
+		width: 90vw;
+		border-bottom: 4px solid white;
 		}
 		
-		.sobre h1{
+		.sobre-catalogo img{
+		height: 240px;
+		width: 240px;
+		margin-top: -10px;
+		}
+		
+		.sobre-catalogo h1{
 		text-transform: uppercase;
 		font-size: 20px;
-                margin-top: -15px;
+        margin-top: -15px;
 		margin-bottom: 5px;
+		text-align: center;
+		text-shadow: 0 0 10px black;
 		}
 		
-		.sobre h2{
+		.sobre-catalogo h2{
 		text-transform: uppercase;
 		font-size: 16px;
 		text-align: center;
+		text-shadow: 0 0 10px black;
 		}
 		
 		.sobre-nos{
@@ -151,12 +165,24 @@
 		
 		.sobre-nos h3{
 		margin-bottom: 5px;
+		text-shadow: 0 0 2.5px gray;
 		}
 		
 		.sobre-nos p{
 		margin-bottom: 3.5px;
 		margin-left: 1px;
 		margin-right: 1px;
+		text-shadow: 0 0 5px gray;
+		}
+		
+		.sobre-nos i{
+		text-shadow: 0 0 2.5px gray;
+		}
+		
+		/* --- Container --- */
+		
+		.container{
+		
 		}
 		
 		</style>
@@ -182,10 +208,13 @@
 				
 				<div class="sobre">
 					
+					<div class="sobre-catalogo">
+						
 					<img src="./IMG/fundo.png"/>
 					<h1>Chapa Wolves</h1>
 					<h2>Leticia Godoi Bueno de<br>Carvalho Lopes</h2>
-					
+					</div>
+									
 					<div class="sobre-nos">
 						
 						<h3>SOBRE NOS</h3>
