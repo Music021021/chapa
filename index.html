@@ -1,0 +1,247 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jornal Leticia</title>
+		
+		<style scoped>
+			
+		*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		}
+		
+		body{
+		font-family: poppins;
+		background: linear-gradient(90deg, #222 50%, #333 50%);
+		color: white;
+		}
+		
+		a{
+		text-decoration: none;
+		color: aqua;
+		}
+		
+		a:hover{
+		color: #069;
+		}
+		
+		.container{
+		width: 100vw;
+		height: 100vh;
+		}
+		
+		.content{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		}
+		
+		.navbar{
+		position: fixed;
+		top: 20;
+		right: 40;
+		}
+		
+		.menu-linha{
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		position: fixed;
+		top: 20;
+		right: 40;
+		}
+		
+		.menu-x{
+		display: none;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		position: fixed;
+		top: 40;
+		right: 37.5;
+		}
+				
+		.menu-linha div{
+		background-color: white;
+		height: 6px;
+		width: 45px;
+		margin: 5px 0px;
+		border-radius: 10px;
+		}
+		
+		.menu-x div{
+		background-color: white;
+		height: 6.5px;
+		width: 50px;
+		border-radius: 10px;
+		}
+		
+		.x-one{
+		rotate: 42.5deg;
+		position: absolute;
+		top: 0;
+		right: 0;
+		}
+		
+		.x-tree{
+		rotate: -42.5deg;
+		position: absolute;
+		top: 0;
+		right: 0;
+		}
+		
+		.menu-clicked{
+		transition: .5s;
+		background-color: #222;
+		border-right: 4px solid white;
+		width: 70vw;
+		height: 100vh;
+		position: fixed;
+		left: -71vw;
+		top: 0;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		}
+		
+		.sobre{
+		position: relative;
+		top: 30;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		height: 90vh;
+		width: 50vw;
+		}
+		
+		.sobre img{
+		height: 150px;
+		width: 150px;
+		border-radius: 10px;
+		}
+		
+		.sobre h1{
+		text-transform: uppercase;
+		font-size: 20px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		}
+		
+		.sobre h2{
+		text-transform: uppercase;
+		font-size: 16px;
+		text-align: center;
+		}
+		
+		.sobre-nos{
+		position: absolute;
+		bottom: 70;
+		text-align: center;
+		color: #666;
+		}
+		
+		.sobre-nos h3{
+		margin-bottom: 5px;
+		}
+		
+		.sobre-nos p{
+		margin-bottom: 3.5px;
+		margin-left: 6px;
+		margin-right: 6px;
+		}
+		
+		</style>
+	</head>
+	
+	<body>
+	
+		<!-- Navbar -->
+		<nav class="navbar">
+			
+			<button class="menu-linha">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
+			
+			<button class="menu-x">
+				<div class="x-one"></div>
+				<div class="x-tree"></div>
+			</button>
+			
+			<div class="menu-clicked">
+				
+				<div class="sobre">
+					
+					<img src="./IMG/fundo.png"/>
+					<h1>Chapa Wolves</h1>
+					<h2>Leticia Godoi Bueno de<br>Carvalho Lopes</h2>
+					
+					<div class="sobre-nos">
+						
+						<h3>SOBRE NOS</h3>
+						<p>Somos a Chapa Wolves da escola Leticia.
+						Criamos esse site para informar
+						os alunos sobres provas externas,
+						Interclasses, avisos da escola,
+						Campanhas, etc...</p>
+						<i class="insta"><ion-icon id="icon-instagram" name="logo-instagram"></ion-icon>INSTAGRAM: <a href="https://instagram.com/chapa.wolves?igshid=YmMyMTA2M2y=">@chapa._wolves</a></i>
+					
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</nav>
+		
+		<!-- Container -->
+		<div class="container">
+		
+			<div class="content">
+		
+			
+		
+			</div>
+		
+		</div>
+	
+	</body>
+	
+	<script>
+		
+		var menuLinha = document.querySelector('.menu-linha');
+		var menuX = document.querySelector('.menu-x');
+		var navbar = document.querySelector('.menu-clicked');
+		
+		menuLinha.addEventListener('click', abrirNavbar);
+		menuX.addEventListener('click', fecharNavbar);
+		
+		function abrirNavbar(){
+		navbar.style.left = '0';
+		menuLinha.style.display = 'none';
+		menuX.style.display = 'flex';
+		}
+		
+		function fecharNavbar(){
+		navbar.style.left = '-71vw';
+		menuLinha.style.display = 'flex';
+		menuX.style.display = 'none';
+		}
+		
+	</script>
+	
+	<body><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script></body>
+	
+</html>
